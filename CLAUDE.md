@@ -33,7 +33,7 @@ Node.js application for experimenting with Claude Code hooks. Main script should
 
 # Issue Tracking
 
-This project uses **bd (beads)** for issue tracking.
+This project uses **bd (beads)** for issue tracking. When commit changes, they should belong to a `bead` (issue) that is tracked in `bd`. Each bead has a status (e.g., `ready`, `in_progress`, `closed`) that reflects its current state in the workflow.
 
 Run `bd prime` for workflow context/details, or install hooks (`bd hooks install`) for auto-injection.
 
