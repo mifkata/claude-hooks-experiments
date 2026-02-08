@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    container_name: hooks_devcontainer
+    volumes:
+      - ..:/app
+    stdin_open: true
+    tty: true
+    command: zsh

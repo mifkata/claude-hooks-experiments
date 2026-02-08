@@ -4,7 +4,14 @@
   "description": "",
   "main": ".claude/hooks/handle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dc:compose": "docker compose -f .devcontainer/docker-compose.yml",
+    "devcontainer": "docker exec -it hooks_devcontainer zsh",
+    "devcontainer:build": "pnpm dc:compose build",
+    "devcontainer:rebuild": "pnpm dc:compose build --no-cache",
+    "devcontainer:start": "pnpm dc:compose up -d",
+    "devcontainer:stop": "pnpm dc:compose down",
+    "devcontainer:restart": "pnpm devcontainer:stop && pnpm devcontainer:start"
   },
   "keywords": [],
   "author": "",
